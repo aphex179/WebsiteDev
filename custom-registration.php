@@ -138,18 +138,20 @@ if (userN.value == ''){
     	username_error.textContent = '';
     }
 }
-
+	
 function inputValidation4(inputTxt){
 var email = document.getElementById('txtEmail');
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var email_error = document.getElementById("email-error");
 
-if (email.value == ''){
+if (email.value == '' || !email.value.match(emailFormat)){
 	email_error.textContent = 'Please enter a valid email!';
      email_error.style.color = 'red';
 	} else {
     	email_error.textContent = '';
     }
 }
+
 
 function inputValidation5(txtPassword, txtConfirmPassword){
 var password = document.getElementById('txtPassword');
