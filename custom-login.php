@@ -42,9 +42,41 @@ else{
 	get_header();
 ?>
 
+<script>
+function inputValidation(inputTxt){
+var userN = document.getElementById('username');
+var userN_error = document.getElementById("userN-error");
+
+if (userN.value == ''){
+	userN_error.textContent = 'Please enter your username!';
+     userN_error.style.color = 'red';
+	} else {
+    	userN_error.textContent = '';
+    }
+}
+
+function inputValidation2(inputTxt){
+var password = document.getElementById('password');
+var password_error = document.getElementById("pwd-error");
+
+if (password.value == ''){
+	password_error.textContent = 'Please enter your password!';
+     password_error.style.color = 'red';
+	} else {
+    	password_error.textContent = '';
+    }
+}
+
+</script>
+
+
 <style>
 .loginForm{
 padding: 70px;
+
+	#page.site{
+    	margin-top:100px;
+    }
 
 }
 </style>
@@ -55,11 +87,14 @@ padding: 70px;
 <strong style="font-size: 40px;">Login to LeadLife</strong>
     <p>
         <label for="username">Username/Email</label><br />
-        <input name="username" type="text" id="username" placeholder="Enter Username/Email" />
+        <input name="username" type="text" id="username" placeholder="Enter Username" onblur='inputValidation(this)'>
+        <div id='userN-error'></div>
     </p>
+    
     <p>
         <label for="password">Password</label><br />
-        <input name="password" type="password" id="password" placeholder="Enter Password" />
+        <input name="password" type="password" id="password" placeholder="Enter Password" onblur='inputValidation2(this)'>
+        <div id='pwd-error'></div>
     </p>
     <p>
         <button type="submit" name="submit">Login</button>
