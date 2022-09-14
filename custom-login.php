@@ -73,12 +73,15 @@ if (password.value == ''){
 <style>
 .loginForm{
 padding: 70px;
-
-	#page.site{
-    	margin-top:100px;
-    }
-
+display: flex;
+justify-content: center;
 }
+
+#page.site{
+ margin-top:100px;
+}
+
+
 </style>
 
 <div class="loginForm">
