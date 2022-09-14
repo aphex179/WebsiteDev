@@ -72,7 +72,7 @@ max-width: 800px;
 }
 
 .custom-faq .contentBx.active .content{
-    height: 150px;
+    height: 400px;
     padding: 10px;
 }
 
@@ -86,10 +86,12 @@ h1{
 <div class="custom-faq">
 <h1 style="font-size: 40px; text-align:center;">LeadLife FAQ</h1>
     <div class="contentBx">
-        <div class="label">List one</div>
+        <div class="label">How do I enrol into a course?</div>
       <div class="content">
         <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        Here at LeadLife, we offer tier based courses to suit you needs. Please check the following instructional video:
+			<iframe width="500" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+			</iframe>
         </p>
       </div>
     </div>
