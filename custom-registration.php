@@ -190,9 +190,12 @@ if ( conf_password.value === password.value){
 padding: 70px;
 }
 
-#custom-registration{
-margin: 20vh auto 0 auto;
-padding: 20px;
+.input-control{
+padding: 10px;
+}
+
+.button{
+padding: 10px;
 }
 
 
