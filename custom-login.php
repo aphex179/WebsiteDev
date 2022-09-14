@@ -20,6 +20,7 @@
 	if($_POST){
 		$username =$wpdb->escape($_POST['username']); //has to be wpdb for live site
 		$password =$wpdb->escape($_POST['password']);
+        
 
 		$login_array = array();
 		$login_array['user_login'] = $username;
@@ -32,7 +33,7 @@
 			echo "<script>window.location = '".site_url()."'</script>";
 }else{
 		//invalid login
-			echo "INVALID credentials";
+			echo "<p>Invalid credentials! Please try again!</p>";
 
 }
 
@@ -71,32 +72,39 @@ if (password.value == ''){
 
 
 <style>
-.loginForm{
-padding: 70px;
-display: flex;
-justify-content: center;
-}
 
-#page.site{
- margin-top:100px;
-}
+.loginForm{
+padding: 70px; 
+  display: flex;
+  justify-content: center;
+  }
+  
+
+	#page.site{
+    	margin-top:100px;
+    }
+    
+    h1{
+    font-size: 40px;
+    padding-bottom: 30px;
+    }
 
 
 </style>
 
-<div class="loginForm">
+<div style="width:800px; margin:0 auto;" class="loginForm">
 <form method="post">
 
-<strong style="font-size: 40px;">Login to LeadLife</strong>
+<h1>Login to LeadLife</h1>
     <p>
         <label for="username">Username/Email</label><br />
-        <input name="username" type="text" id="username" placeholder="Enter Username" onblur='inputValidation(this)'>
+        <input name="username" type="text" id="username" size="30" placeholder="Enter Username" onblur='inputValidation(this)'>
         <div id='userN-error'></div>
     </p>
     
     <p>
         <label for="password">Password</label><br />
-        <input name="password" type="password" id="password" placeholder="Enter Password" onblur='inputValidation2(this)'>
+        <input name="password" type="password" id="password" size="30" placeholder="Enter Password" onblur='inputValidation2(this)'>
         <div id='pwd-error'></div>
     </p>
     <p>
