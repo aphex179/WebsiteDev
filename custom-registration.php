@@ -78,13 +78,13 @@ if($_POST){
     	'last_name' => $lastname,
 		]);
         
-        exit();
+        //exit();
     
-        echo "User Created Successfully, Thank you for Registering";
+       echo "User Created Successfully, Thank you for Registering";
 		
-		wp_redirect(site_url()."/log-in");
-		
-        exit();
+        wp_redirect(site_url()."/log-in");
+       exit;
+       
     }else{
         
         //print_r($error);
@@ -94,8 +94,7 @@ if($_POST){
 		echo '<div class="error-message">' . esc_html( $error ) . '</div>';
 	}
 }
- 
-        
+      
     }
 }
 
@@ -187,8 +186,15 @@ if ( conf_password.value === password.value){
 
 <style>
 .regoForm{
-padding: 70px;
-}
+padding: 50px;
+
+  }
+  
+  .error-message{
+  padding: 5px;
+  color: red;
+  }
+
 
 .input-control{
 padding: 10px;
@@ -196,6 +202,9 @@ padding: 10px;
 
 .button{
 padding: 10px;
+text-align: center;
+display: inline-block;
+
 }
 
 
@@ -211,7 +220,7 @@ padding: 10px;
 	
     <div class="input-control">
     	<label for="txtFirstName">Enter First Name</label><br>
-        <input id="txtFirstName" name="txtFirstName" type="text" placeholder="First Name" onblur='inputValidation(this)'>
+        <input id="txtFirstName" name="txtFirstName" type="text" size="50" placeholder="First Name" onblur='inputValidation(this)'>
         <br/>
         <div id='name-error'></div>
         </div>
@@ -219,7 +228,7 @@ padding: 10px;
     
     	<div class="input-control">
     	<label for="txtLastName">Enter Last Name</label><br>
-        <input type="text" id="txtLastName" name="txtLastName" placeholder="Last Name" onblur='inputValidation2(this)'>
+        <input type="text" id="txtLastName" name="txtLastName" size="50" placeholder="Last Name" onblur='inputValidation2(this)'>
          <br/>
         <div id='name-error2'></div>
         
@@ -227,7 +236,7 @@ padding: 10px;
     
     	<div class="input-control">
     	<label for="txtUserName">Enter Username</label><br>
-        <input id="txtUsername" name="txtUsername" type="text" placeholder="Username" onblur='inputValidation3(this)'>
+        <input id="txtUsername" name="txtUsername" type="text" size="50" placeholder="Username" onblur='inputValidation3(this)'>
                  <br/>
         <div id='username-error'></div>
         
@@ -235,7 +244,7 @@ padding: 10px;
     
     	<div class="input-control">
     	<label for="txtEmail">Enter Email</label><br>
-        <input id="txtEmail" name="txtEmail" type="text" placeholder="Email" onblur='inputValidation4(this)'> 
+        <input id="txtEmail" name="txtEmail" type="text" size="50" placeholder="Email" onblur='inputValidation4(this)'> 
         <br/>
         <div id='email-error'></div>
         
@@ -243,7 +252,7 @@ padding: 10px;
     
         <div class="input-control">
     	<label for="txtPassword">Enter Password</label><br>
-        <input  id="txtPassword" name="txtPassword" type="password" placeholder="Password" onblur='inputValidation5(this)'>
+        <input  id="txtPassword" name="txtPassword" type="password" size="50" placeholder="Password" onblur='inputValidation5(this)'>
                 <br/>
         <div id='pw-error'></div>
         
@@ -251,12 +260,12 @@ padding: 10px;
     
        <div class="input-control">
     	<label for="txtConfirmPassword">Confirm Password</label><br>
-        <input id="txtConfirmPassword" name="txtConfirmPassword" type="password" placeholder="Confirm Password" onblur='inputValidation6(this)'>
+        <input id="txtConfirmPassword" name="txtConfirmPassword" size="50" type="password" placeholder="Confirm Password" onblur='inputValidation6(this)'>
         <br/>
         <div id='cpw-error'></div>
     </div>
       
-    <button type="submit">Register</button> 
+    <button class="button" type="submit">Register</button> 
 
 </form>
 </div>
