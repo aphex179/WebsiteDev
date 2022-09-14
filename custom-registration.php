@@ -77,6 +77,8 @@ if($_POST){
     	'first_name' => $firstname,
     	'last_name' => $lastname,
 		]);
+        
+        exit();
     
         echo "User Created Successfully, Thank you for Registering";
 		
@@ -138,7 +140,7 @@ if (userN.value == ''){
     	username_error.textContent = '';
     }
 }
-	
+
 function inputValidation4(inputTxt){
 var email = document.getElementById('txtEmail');
 var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -152,22 +154,33 @@ if (email.value == '' || !email.value.match(emailFormat)){
     }
 }
 
-
-function inputValidation5(txtPassword, txtConfirmPassword){
+function inputValidation5(inputTxt){
 var password = document.getElementById('txtPassword');
-var conf_password = document.getElementById('txtConfirmPassword');
 var pw_error = document.getElementById("pw-error");
 
-if ( conf_password.value === password.value){
-    	pw_error.textContent = 'Passwords match!';
-        pw_error.style.color = 'green';
-	} else if(conf_password.value !== password.value)  {
-	pw_error.textContent = 'Passwords do not match!';
+if (password.value == ''){
+	pw_error.textContent = 'Please enter a password!';
      pw_error.style.color = 'red';
+	} else {
+    	pw_error.textContent = '';
     }
 }
 
 
+function inputValidation6(txtPassword, txtConfirmPassword){
+var password = document.getElementById('txtPassword');
+var conf_password = document.getElementById('txtConfirmPassword');
+var cpw_error = document.getElementById("cpw-error");
+
+if ( conf_password.value === password.value){
+    	cpw_error.textContent = 'Passwords match!';
+        cpw_error.style.color = 'green';
+	} else if(conf_password.value !== password.value)  {
+	cpw_error.textContent = 'Passwords do not match!';
+     cpw_error.style.color = 'red';
+    }
+ }
+ 
   
 </script>
 
@@ -227,15 +240,17 @@ padding: 20px;
     
         <div class="input-control">
     	<label for="txtPassword">Enter Password</label><br>
-        <input  id="txtPassword" name="txtPassword" type="password" placeholder="Password">
+        <input  id="txtPassword" name="txtPassword" type="password" placeholder="Password" onblur='inputValidation5(this)'>
+                <br/>
+        <div id='pw-error'></div>
         
     </div>
     
        <div class="input-control">
     	<label for="txtConfirmPassword">Confirm Password</label><br>
-        <input id="txtConfirmPassword" name="txtConfirmPassword" type="password" placeholder="Confirm Password" onblur='inputValidation5(this)'>
+        <input id="txtConfirmPassword" name="txtConfirmPassword" type="password" placeholder="Confirm Password" onblur='inputValidation6(this)'>
         <br/>
-        <div id='pw-error'></div>
+        <div id='cpw-error'></div>
     </div>
       
     <button type="submit">Register</button> 
