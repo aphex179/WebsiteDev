@@ -31,9 +31,12 @@
 		if(!is_wp_error($verify_user)){
 		//after successful login, redirect to homepage
 			echo "<script>window.location = '".site_url()."'</script>";
-}else{
-		//invalid login
-			echo "<p>Invalid credentials! Please try again!</p>";
+}//end of post
+else{
+            $error = 'Invalid credentials! Please try again!';
+           /* echo '$error'; */
+           wp_redirect(site_url()."/log-in");
+      exit;
 
 }
 
@@ -88,12 +91,21 @@ padding: 70px;
     font-size: 40px;
     padding-bottom: 30px;
     }
+    
+    .site-footer {
+ position: absolute;
+  bottom: 0;
+width: 100%;
+height: 2.5rem;
+}
 
 
 </style>
 
 <div style="width:800px; margin:0 auto;" class="loginForm">
 <form method="post">
+
+<div><?php echo $error ?>
 
 <h1>Login to LeadLife</h1>
     <p>
@@ -110,6 +122,10 @@ padding: 70px;
     <p>
         <button type="submit" name="submit">Login</button>
     </p>
+    
+    <p><a href="https://leadlife.com.au/register/">New to LeadLife? Register here</a></p>
+        <p><a href="https://leadlife.com.au/forgot-password/">Forgot password?</a></p>
+    
 </form>
 </div>
 <?php
