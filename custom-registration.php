@@ -80,9 +80,12 @@ if($_POST){
         
         //exit();
     
-       echo "User Created Successfully, Thank you for Registering";
-		
-        wp_redirect(site_url()."/log-in");
+       //echo "User Created Successfully, Thank you for Registering";
+        //wp_redirect(site_url()."/log-in");
+        
+        	echo "<script>window.location.href = 'http://www.leadlife.com.au/log-in';</script>";	
+ 	//wp_redirect(site_url());
+      
        exit;
        
     }else{
@@ -179,10 +182,8 @@ if ( conf_password.value === password.value){
      cpw_error.style.color = 'red';
     }
  }
- 
-  
-</script>
 
+</script>
 
 <style>
 .regoForm{
@@ -191,7 +192,7 @@ padding: 50px;
   }
   
   .error-message{
-  padding: 5px;
+  padding-left: 50px;
   color: red;
   }
 
@@ -215,7 +216,7 @@ display: inline-block;
 
 <form id="customRegistration" method = "post">
 
-<h1>Registration</h1>
+<h1>Register to Lead Life</h1>
 
 	
     <div class="input-control">
