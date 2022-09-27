@@ -1,19 +1,20 @@
 <style>
-h1{
+
+h1 {
 max-width: 1000px;
   margin: auto;
 padding: 50px;
 text-align: center;
 }
 
-h2{
+h2 {
 max-width: 1000px;
   margin: auto;
 padding-bottom: 10px;
 padding-top: 30px:
 }
 
-p{
+p {
 max-width: 1000px;
 margin: auto;
     position: relative;
@@ -22,7 +23,7 @@ margin: auto;
     color: #7A7A7A;   
 } 
 
-ul{
+ul {
 max-width: 1000px;
 margin: auto;
     position: relative;
@@ -31,5 +32,9 @@ margin: auto;
     color: #7A7A7A;
 }
 
+.site-footer{
+  width: 150%;
+  height: 100%;
+}
 
 </style>
