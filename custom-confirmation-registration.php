@@ -17,6 +17,9 @@ get_header();
 .custom-reg-conf{
 padding: 100px; 
   /*display: flex; */
+    margin: auto;
+  width: 50%;
+  text-align: center;
   justify-content: center;
   }
 
@@ -30,6 +33,10 @@ padding: 100px;
    p{
 	    font-size: 20px;
 	   
+   }
+   
+   h1{
+   padding-bottom: 20px;
    }
 
 </style>
