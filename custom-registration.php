@@ -188,6 +188,8 @@ if ( conf_password.value === password.value){
 <style>
 .regoForm{
 padding: 50px;
+  display: flex;
+  justify-content: center;
 
   }
   
@@ -205,9 +207,10 @@ padding: 10px;
 padding: 10px;
 text-align: center;
 display: inline-block;
-
-}
-
+width :100%;
+ margin-top: 5%;
+ margin-bottom: 5%;
+)
 
 
 </style>
@@ -216,7 +219,7 @@ display: inline-block;
 
 <form id="customRegistration" method = "post">
 
-<h1>Register to Lead Life</h1>
+<h1 style="text-align: center;">Register to Lead Life</h1>
 
 	
     <div class="input-control">
@@ -267,6 +270,8 @@ display: inline-block;
     </div>
       
     <button class="button" type="submit">Register</button> 
+    <p style="text-align: center;"><a href="https://leadlife.com.au/log-in/">Already registered? Login</a></p>
+
 
 </form>
 </div>
