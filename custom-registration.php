@@ -83,7 +83,7 @@ if($_POST){
        //echo "User Created Successfully, Thank you for Registering";
         //wp_redirect(site_url()."/log-in");
         
-        	echo "<script>window.location.href = 'https://leadlife.com.au/registration-confirmation/';</script>";	
+        	echo "<script>window.location.href = 'https://leadlife.com.au/custom-registration-confirmation/';</script>";	
  	//wp_redirect(site_url());
       
        exit;
