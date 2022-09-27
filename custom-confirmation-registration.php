@@ -59,21 +59,15 @@ Otherwise, <a href="https://leadlife.com.au/log-in/">Click Here to Login</a>
 Any inquires, please <a href="https://leadlife.com.au/contact-me/">Contact Us Here</a>
 </p>
 
-
-
-</div>
-
-
-    
+</div>  
+	
 </body>
- 
 
 <script>
     function redirectLogin(){
         window.location="https://leadlife.com.au/log-in/";
     }
 </script>
-
 
 <?php 
 
