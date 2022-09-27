@@ -96,11 +96,9 @@ if($_POST){
 	foreach ( $error as $error ) {
 		echo '<div class="error-message">' . esc_html( $error ) . '</div>';
 	}
-}
-      
+}      
     }
 }
-
 
 ?>
 
@@ -158,16 +156,16 @@ if (email.value == '' || !email.value.match(emailFormat)){
 
 function inputValidation5(inputTxt){
 var password = document.getElementById('txtPassword');
+var pwd_strength="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 var pw_error = document.getElementById("pw-error");
 
-if (password.value == ''){
-	pw_error.textContent = 'Please enter a password!';
+if ((password.value == '' )|| (!password.value.match(pwd_strength))){
+	pw_error.textContent = 'Please enter minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character';
      pw_error.style.color = 'red';
 	} else {
-    	pw_error.textContent = '';
-    }
-}
-
+    	pw_error.textContent = ''; 
+    } 
+} 
 
 function inputValidation6(txtPassword, txtConfirmPassword){
 var password = document.getElementById('txtPassword');
